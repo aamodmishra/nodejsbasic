@@ -1,0 +1,1 @@
+console.error(new Error("please enter no above 0"))
