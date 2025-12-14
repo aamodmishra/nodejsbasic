@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 
 })
 
-app.get ('/create',async (req,res)=>{
+/*app.get ('/create',async (req,res)=>{
 
   let createduser = await userModel.create({
     name :'aamod',
@@ -17,6 +17,11 @@ app.get ('/create',async (req,res)=>{
     email :"aamodmishra11@gmail.com",
    })
    res.send(createduser);
+})*/
+app.get ('/update',async (req,res)=>{
+
+   let updatemodel= await userModel.findOneAndUpdate({username :"aamodmishra"},{name :"aakhe"},{new:true})
+   res.send(updatemodel);
 })
 
 app.listen(port, () => {
